@@ -1,0 +1,9 @@
+-r requirements.txt
+pytest>=8.0
+pytest-asyncio>=0.23
+ruff>=0.6
+mypy>=1.10
+# Ships a real PostgreSQL server as a wheel, so the persistence tests run
+# against actual Postgres with no system install. Tests fall back to
+# TEST_DATABASE_URL / DATABASE_URL when one is provided.
+pgserver>=0.1.4; sys_platform != "win32"

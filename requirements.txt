@@ -1,0 +1,7 @@
+discord.py>=2.4,<3
+httpx>=0.27,<1
+python-dotenv>=1.0,<2
+psycopg[binary,pool]>=3.1,<4
+# Already pulled in by discord.py; pinned explicitly because app/health.py
+# imports aiohttp.web directly for the /health endpoint.
+aiohttp>=3.9,<4
